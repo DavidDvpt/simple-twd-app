@@ -1,0 +1,12 @@
+body {
+    width: 1000px;
+}
+.characterList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.characterBloc {
+    width: 200px;
+    height: 200px;
+}
