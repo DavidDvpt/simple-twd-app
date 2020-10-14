@@ -2,24 +2,24 @@ import React from "react";
 import "../css/twd.css";
 
 class Character extends React.Component {
+
   render() {
+    const { firstName, lastName, image, actor } = this.props;
     return (
       <div className="characterBloc">
         <figure>
-          <figcaption>
-            {this.props.firstName + " " + this.props.lastName}
-          </figcaption>
-          <img
-            src={this.props.image}
-            alt={this.props.firsName + " " + this.props.lastName}
-          />
+          <figcaption>{firstName + " " + lastName}</figcaption>
+          <img src={image} alt={firstName + " " + lastName} />
         </figure>
         <div className="actorBloc">
-            <h4>Acteur:</h4>
+          <p className="actor">Acteur: {actor}</p>
         </div>
-        <div className="descriptionBloc">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos voluptatum commodi temporibus nostrum deserunt autem molestias maiores consectetur, sint exercitationem nisi dolores eligendi vitae eveniet quibusdam illo consequuntur blanditiis amet!</p>
+        <div className="buttons">
+            <button>Infos</button><button><i className="far fa-thumbs-up fa-lg"></i></button>
         </div>
+        {/* <div className="descriptionBloc">
+          <p></p>
+        </div> */}
       </div>
     );
   }

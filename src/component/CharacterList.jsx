@@ -4,6 +4,7 @@ import characters from "./characterData";
 import "../css/twd.css";
 
 class CharacterList extends React.Component {
+
   render() {
     return (
       <div className="characterList">

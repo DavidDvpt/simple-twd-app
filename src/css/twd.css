@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     max-width: 1000px;
     min-width: 600px;
@@ -13,7 +17,7 @@ body {
 
 .characterBloc {
     width: 200px;
-    height: 200px;
+    min-height: 240px;
     background-color: whitesmoke;
     margin: 10px;
     border-radius: 5px;
@@ -22,20 +26,35 @@ body {
 figure {
     margin: 0px;
     padding: 0px;
-    text-align: center;
+    height: 180px;
+    
 }
 
 figCaption {
-    margin: 5px 0px;
+    height: 30px;
+    padding: 5px 0px;
     text-align: center;
     font-weight: bold;
 }
 
 figure img {
+    display: block;
     width: 100px;
+    height: 100px;
+    margin: 20px auto 0px auto;
     border-radius: 50%;
 }
+
 figure img:hover {
     width: 150px;
+    height: 150px;
+    margin: 0px auto;
+
+    padding-top: 0px;
     border-radius: 50%;
+}
+
+.actor {
+    padding-left: 5px;
+    margin: 0px;
 }
