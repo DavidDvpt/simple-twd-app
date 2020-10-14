@@ -1,12 +1,38 @@
 body {
     width: 1000px;
+    background-color: grey;
 }
+
 .characterList {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 .characterBloc {
     width: 200px;
     height: 200px;
+    background-color: whitesmoke;
+    margin: 10px;
+    
+}
+figure {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+figCaption {
+    margin: 5px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+figure img {
+    width: 100px;
+    border-radius: 50%;
+}
+figure img:hover {
+    width: 150px;
+    border-radius: 50%;
 }

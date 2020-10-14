@@ -6,11 +6,12 @@ import "../css/twd.css";
 class CharacterList extends React.Component {
   render() {
     return (
-    <div className="characterList">
-        { characters.map((character) => (
-                <Character key={character.lastName} {...character} />
+      <div className="characterList">
+        {characters.map((character) => (
+          <Character key={character.lastName} {...character} />
         ))}
-      </div>)
+      </div>
+    );
   }
 }
 
