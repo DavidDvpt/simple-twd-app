@@ -13,7 +13,7 @@ class ButtonsBlock extends Component {
   render() {
     return (
       <div className="buttons">
-        <button type="button" className="btn">
+        <button type="button" className="btn" onClick={this.props.display}>
           Infos
         </button>
         <button type="button" className="btn" onClick={this.incrementLike}>

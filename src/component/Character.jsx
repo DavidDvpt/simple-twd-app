@@ -8,7 +8,10 @@ import DescriptionBloc from "./DescriptionBloc";
 class Character extends React.Component {
   constructor (props) {
     super(props)
-    this.state = { }
+    this.state = { 
+      display: false,
+    }
+    this.displayDescription = this.displayDescription.bind(this)
   }
   
   render() {
@@ -17,10 +20,16 @@ class Character extends React.Component {
       <div className="characterBloc">
         <FigureImg { ...this.props } />
         <ActorBloc { ...this.props } />
-        <DescriptionBloc { ...this.props } />
-        <ButtonsBlock { ...this.props } />
+        {this.state.display? <DescriptionBloc { ...this.props } /> : null}
+        <ButtonsBlock { ...this.props } display = {this.displayDescription } />
       </div>
     );
+  }
+
+  displayDescription() {
+    this.setState(
+      {display: !this.state.display}
+    )
   }
 }
 

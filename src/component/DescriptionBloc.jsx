@@ -7,9 +7,9 @@ class DescriptionBloc extends Component {
     }
     render() { 
         return ( 
-            <div>{/* <div className="descriptionBloc">
-            <p></p>
-            </div> */} </div>
+            <div className="descriptionBloc">
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Error voluptate, veritatis vel ducimus nulla, repellendus consequuntur libero nihil nisi non quidem laboriosam similique repudiandae debitis beatae asperiores veniam illum excepturi.</p>
+            </div>
                          
         );
     }
