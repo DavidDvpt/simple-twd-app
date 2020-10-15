@@ -1,8 +1,17 @@
 import React from "react";
 import "../css/twd.css";
+import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 class Character extends React.Component {
-
+  constructor (props) {
+    super(props)
+    this.state = {
+      like: 0,
+    }
+    this.incrementLike = this.incrementLike.bind(this);
+  }
+  
   render() {
     const { firstName, lastName, image, actor } = this.props;
     return (
@@ -15,13 +24,20 @@ class Character extends React.Component {
           <p className="actor">Acteur: {actor}</p>
         </div>
         <div className="buttons">
-            <button>Infos</button><button><i className="far fa-thumbs-up fa-lg"></i></button>
+            <button type="button" className="btn">Infos</button>
+            <button type="button" className="btn" onClick={this.incrementLike}>{this.state.like}<FontAwesomeIcon icon={faThumbsUp} /></button>
         </div>
         {/* <div className="descriptionBloc">
           <p></p>
         </div> */}
       </div>
     );
+  }
+
+  incrementLike() {
+    this.setState({
+      like: this.state.like + 1,
+    })
   }
 }
 
