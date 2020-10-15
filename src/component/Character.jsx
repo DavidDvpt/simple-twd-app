@@ -16,16 +16,16 @@ class Character extends React.Component {
     const { firstName, lastName, image, actor } = this.props;
     return (
       <div className="characterBloc">
-        <figure>
+        <figure className="margin-b10">
           <figcaption>{firstName + " " + lastName}</figcaption>
           <img src={image} alt={firstName + " " + lastName} />
         </figure>
-        <div className="actorBloc">
+        <div className="actorBloc margin-b10">
           <p className="actor">Acteur: {actor}</p>
         </div>
         <div className="buttons">
             <button type="button" className="btn">Infos</button>
-            <button type="button" className="btn" onClick={this.incrementLike}>{this.state.like}<FontAwesomeIcon icon={faThumbsUp} /></button>
+            <button type="button" className="btn" onClick={this.incrementLike}><span>{this.state.like}</span><FontAwesomeIcon icon={faThumbsUp} /></button>
         </div>
         {/* <div className="descriptionBloc">
           <p></p>
