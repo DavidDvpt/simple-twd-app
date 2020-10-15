@@ -1,43 +1,26 @@
 import React from "react";
 import "../css/twd.css";
-import { faThumbsUp } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import FigureImg from "./FigureImg";
+import ActorBloc from "./ActorBloc";
+import ButtonsBlock from "./ButtonsBloc";
+import DescriptionBloc from "./DescriptionBloc";
 
 class Character extends React.Component {
   constructor (props) {
     super(props)
-    this.state = {
-      like: 0,
-    }
-    this.incrementLike = this.incrementLike.bind(this);
+    this.state = { }
   }
   
   render() {
     const { firstName, lastName, image, actor } = this.props;
     return (
       <div className="characterBloc">
-        <figure className="margin-b10">
-          <figcaption>{firstName + " " + lastName}</figcaption>
-          <img src={image} alt={firstName + " " + lastName} />
-        </figure>
-        <div className="actorBloc margin-b10">
-          <p className="actor">Acteur: {actor}</p>
-        </div>
-        <div className="buttons">
-            <button type="button" className="btn">Infos</button>
-            <button type="button" className="btn" onClick={this.incrementLike}><span>{this.state.like}</span><FontAwesomeIcon icon={faThumbsUp} /></button>
-        </div>
-        {/* <div className="descriptionBloc">
-          <p></p>
-        </div> */}
+        <FigureImg { ...this.props } />
+        <ActorBloc { ...this.props } />
+        <DescriptionBloc { ...this.props } />
+        <ButtonsBlock { ...this.props } />
       </div>
     );
-  }
-
-  incrementLike() {
-    this.setState({
-      like: this.state.like + 1,
-    })
   }
 }
 
